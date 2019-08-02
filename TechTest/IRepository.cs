@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interview
+namespace TechTest
 {
     // Please create an in memory implementation of IRepository<T> 
 
