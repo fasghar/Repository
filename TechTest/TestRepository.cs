@@ -24,18 +24,13 @@ namespace TechTest
 
         public void Delete(IComparable id)
         {
-            var entityToDelete = testEntities.Find(IsEqual(id));
+            var entityToDelete = testEntities.Find(e => e.Id.Equals(id));
             testEntities.Remove(entityToDelete);
         }
 
         public T FindById(IComparable id)
         {
-            return testEntities.Find(IsEqual(id));
-        }
-
-        private Predicate<T> IsEqual(IComparable id)
-        {
-            return match => match.Id.Equals(id);
+            return testEntities.Find(e => e.Id.Equals(id));
         }
     }
 }
